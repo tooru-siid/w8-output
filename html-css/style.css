@@ -1,0 +1,42 @@
+body {
+  margin: 0;
+  background-color: #0e0f1a;
+  font-family: sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(4, 150px);
+  grid-auto-rows: 100px;
+  gap: 20px;
+  padding: 40px;
+  background: repeating-linear-gradient(
+    45deg,
+    #2a1b38,
+    #2a1b38 10px,
+    #41285e 10px,
+    #41285e 20px
+  );
+  border-radius: 10px;
+}
+
+.card {
+  background-color: #c44fff;
+  color: white;
+  font-weight: bold;
+  font-size: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* 9番目のカードだけ位置調整 */
+.card:nth-child(9) {
+  grid-column: 1;
+}
