@@ -1,0 +1,87 @@
+/* 全体の設定 */
+body {
+  background-color: #0f172a; /* ダークネイビー */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* コンテナ設定 */
+.container {
+  background-color: #1e293b; /* 濃いグレー背景 */
+  padding: 30px 32px;
+  border-radius: 8px;
+  box-shadow: 0 0 0 1px #334155; /* 薄い枠線 */
+  width: 360px;
+}
+
+/* タイトル */
+h2 {
+  color: #fff;
+  font-size: 20px;
+  margin-bottom: 24px;
+}
+
+/* ラベルと入力フォーム */
+.input-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 16px;
+}
+
+label {
+  color: #cbd5e1;
+  font-size: 14px;
+  margin-bottom: 6px;
+}
+
+input {
+  padding: 10px 12px;
+  border-radius: 6px;
+  border: 1px solid #334155;
+  background-color: #334155;
+  color: #fff;
+  font-size: 14px;
+}
+
+input::placeholder {
+  color: #94a3b8;
+}
+
+/* ボタン */
+button {
+  width: 100%;
+  padding: 10px 0;
+  background-color: #3b82f6; /* 青 */
+  color: white;
+  font-size: 14px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 8px;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #2563eb; /* ホバー時の濃い青 */
+}
+
+/* サインアップリンク */
+.signup-text {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 14px;
+  color: #94a3b8;
+}
+
+.signup-text a {
+  color: #3b82f6;
+  text-decoration: none;
+}
+
+.signup-text a:hover {
+  text-decoration: underline;
+}
