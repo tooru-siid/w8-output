@@ -2,18 +2,17 @@ body {
   margin: 0;
   background-color: #0e0f1a;
   font-family: sans-serif;
+  min-height: 100vh;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
-  height: 100vh;
 }
 
 .container {
-  display: grid;
-  grid-template-columns: repeat(4, 150px);
-  grid-auto-rows: 100px;
+  display: flex;
+  flex-wrap: wrap;
   gap: 20px;
-  padding: 40px;
+  padding: 20px;
   background: repeating-linear-gradient(
     45deg,
     #2a1b38,
@@ -22,6 +21,44 @@ body {
     #41285e 20px
   );
   border-radius: 10px;
+  box-sizing: border-box;
+  margin-bottom: 30px;
+}
+
+/* 上部 4x4 */
+.large-grid {
+  width: 100%;
+  max-width: 1200px;
+}
+
+.large-grid .card {
+  flex: 0 0 calc(25% - 20px); /* 横4枚 */
+  height: calc((100vw - 100px) / 4 * 0.6);
+  max-height: 150px;
+}
+
+/* 下部 2x2 */
+.small-grid {
+  width: 100%;
+  max-width: 1200px; /* 小さめ */
+}
+
+.small-grid .card {
+  flex: 0 0 calc(50% - 20px); /* 横2枚 */
+  height: calc((100vw - 100px) / 2 * 0.6);
+  max-height: 150px;
+}
+
+/* 下部 6x1 */
+.wide-grid {
+  width: 100%;
+  max-width: 1200px;
+}
+
+.wide-grid .card {
+  flex: 0 0 calc(16.66% - 20px); /* 横6枚（100/6=16.66%） */
+  height: calc((100vw - 100px) / 6 * 0.6);
+  max-height: 120px;
 }
 
 .card {
@@ -32,10 +69,11 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 12px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
 }
 
-.card:nth-child(9) {
-  grid-column: 1;
+.empty {
+  background: none;
+  box-shadow: none;
 }
